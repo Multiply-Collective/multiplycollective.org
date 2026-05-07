@@ -44,7 +44,7 @@ export default function Develop() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-32 pb-20 md:pt-40 md:pb-32 px-6 md:px-12 bg-sanctuary">
+      <section className="pt-32 pb-20 md:pt-40 md:pb-32 px-6 md:px-12 bg-obsidian">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -52,10 +52,10 @@ export default function Develop() {
             transition={{ duration: 1 }}
           >
             <p className="text-xs font-body tracking-[0.3em] uppercase text-gold mb-6">Phase Two</p>
-            <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-light italic text-obsidian leading-none mb-8">
+            <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-light italic text-sanctuary leading-none mb-8">
               Develop
             </h1>
-            <p className="font-body text-obsidian/60 text-base md:text-lg max-w-2xl leading-relaxed">
+            <p className="font-body text-sanctuary/60 text-base md:text-lg max-w-2xl leading-relaxed">
               God's Kingdom can only be multiplied through His empowerment. In this phase, we walk alongside you through coaching, training, and relational networks — developing the character, competencies, and vision needed to multiply disciples, raise leaders, and plant churches.
             </p>
           </motion.div>
@@ -65,12 +65,13 @@ export default function Develop() {
       <GoldLine className="max-w-7xl mx-auto" />
 
       {/* Cards */}
-      <section className="py-20 md:py-32 px-6 md:px-12 bg-sanctuary">
+      <section className="py-20 md:py-32 px-6 md:px-12 bg-obsidian">
         <div className="max-w-7xl mx-auto">
           <SectionHeading
             eyebrow="How We Develop"
             title="Four pillars of multiplication"
             description="Development happens relationally, not in isolation. Hover to explore each pillar of the Develop phase."
+            light
           />
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mt-16">
@@ -123,7 +124,7 @@ export default function Develop() {
             <a
               href="/deploy#top"
               onClick={() => window.scrollTo(0, 0)}
-              className="inline-flex items-center gap-2 font-body text-sm tracking-widest uppercase px-8 py-4 border border-blue text-blue hover:bg-blue hover:text-white transition-all duration-500 rounded-md"
+              className="inline-flex items-center gap-2 font-body text-sm tracking-widest uppercase px-8 py-4 border border-sanctuary text-sanctuary hover:bg-sanctuary hover:text-obsidian transition-all duration-500 rounded-md"
             >
               Continue to Deploy →
             </a>
@@ -141,7 +142,7 @@ export default function Develop() {
             transition={{ duration: 0.8 }}
             className="max-w-3xl mx-auto text-center"
           >
-            <p className="text-xs font-body tracking-[0.3em] uppercase text-blue-light mb-6">
+            <p className="text-xs font-body tracking-[0.3em] uppercase text-sanctuary/60 mb-6">
               Core Value
             </p>
             <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-light italic text-sanctuary leading-tight mb-8">

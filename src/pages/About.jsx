@@ -19,7 +19,7 @@ export default function About() {
           alt="Industrial loft space prepared for a sacred gathering, golden sunlight streaming through windows"
           className="w-full h-full object-cover" />
         
-        <div className="absolute inset-0 bg-gradient-to-t from-obsidian/80 via-obsidian/30 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/60 to-obsidian/20" />
         <div className="absolute inset-0 flex items-end pb-16 md:pb-24 px-6 md:px-12">
           <div className="max-w-7xl mx-auto w-full">
             <motion.div
@@ -37,16 +37,17 @@ export default function About() {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-24 md:py-40 px-6 md:px-12 bg-sanctuary">
+      <section className="py-24 md:py-40 px-6 md:px-12 bg-obsidian">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-24">
             <div>
               <SectionHeading
                 eyebrow="Our Mission"
-                title="Empower the many to reach the one" />
+                title="Empower the many to reach the one"
+                light />
               
               <div className="mt-8 space-y-6">
-                <p className="font-body text-obsidian/60 text-base leading-relaxed">
+                <p className="font-body text-sanctuary/60 text-base leading-relaxed">
                   Multiply Collective will empower the many to reach the one by discovering, developing, and deploying followers of Christ to make disciples, raise leaders, and form networks that plant churches.
                 </p>
                 
@@ -58,10 +59,11 @@ export default function About() {
             <div>
               <SectionHeading
                 eyebrow="Our Goals"
-                title="200 churches planted per year" />
+                title="200 churches planted per year"
+                light />
               
               <div className="mt-8 space-y-6">
-                <p className="font-body text-obsidian/60 text-base leading-relaxed">Within the next 3–4 years, Multiply Collective is committed to raising up 78 District Church Multiplication Catalysts, 780 Regional Catalytic Multiplication Leaders, and 40 certified Church Planting Mentors and Coaches. Together, this network is unified around one bold goal: 200 churches planted per year across the USA and Canada Region — a movement that reproduces from day one.
+                <p className="font-body text-sanctuary/60 text-base leading-relaxed">Within the next 3–4 years, Multiply Collective is committed to raising up 78 District Church Multiplication Catalysts, 780 Regional Catalytic Multiplication Leaders, and 40 certified Church Planting Mentors and Coaches. Together, this network is unified around one bold goal: 200 churches planted per year across the USA and Canada Region — a movement that reproduces from day one.
 
                 </p>
                 
@@ -98,8 +100,8 @@ export default function About() {
           </div>
           <div className="bg-blue-dark flex items-center px-6 md:px-12 lg:px-20 py-20 lg:py-0">
             <div>
-              <p className="text-xs font-body tracking-[0.3em] uppercase text-blue-light mb-4">
-                Our Identity
+              <p className="text-xs font-body tracking-[0.3em] uppercase mb-4 text-[hsl(var(--primary-foreground))]">OUR IDENTITY
+
               </p>
               <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-sanctuary leading-tight mb-8">
                 Not an institution. A collective.

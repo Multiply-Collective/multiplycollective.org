@@ -64,7 +64,7 @@ export default function Deploy() {
           alt="Silhouette in a doorway looking out at a sunrise cityscape"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-obsidian/80 via-obsidian/30 to-obsidian/10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/60 to-obsidian/30" />
         <div className="absolute inset-0 flex items-end pb-16 md:pb-24 px-6 md:px-12">
           <div className="max-w-7xl mx-auto w-full">
             <motion.div
@@ -82,13 +82,14 @@ export default function Deploy() {
       </section>
 
       {/* Intro */}
-      <section className="py-24 md:py-32 px-6 md:px-12 bg-sanctuary">
+      <section className="py-24 md:py-32 px-6 md:px-12 bg-obsidian">
         <div className="max-w-7xl mx-auto">
           <div className="max-w-3xl">
             <SectionHeading
               eyebrow="The Launch Blueprint"
               title="From preparation to proclamation"
               description="The missional heart behind multiplication is greater than any model. This 20-week framework is a strategic guide — not a rigid formula — focused on a culture where multiplication is a natural outflow."
+              light
             />
           </div>
         </div>
@@ -97,7 +98,7 @@ export default function Deploy() {
       <GoldLine className="max-w-7xl mx-auto" />
 
       {/* Timeline */}
-      <section className="py-20 md:py-32 px-6 md:px-12 bg-sanctuary">
+      <section className="py-20 md:py-32 px-6 md:px-12 bg-obsidian">
         <div className="max-w-4xl mx-auto">
           {milestones.map((milestone, i) => (
             <TimelineMilestone
@@ -120,7 +121,7 @@ export default function Deploy() {
             transition={{ duration: 0.8 }}
             className="max-w-3xl mx-auto text-center"
           >
-            <p className="text-xs font-body tracking-[0.3em] uppercase text-gold-light mb-6">
+            <p className="text-xs font-body tracking-[0.3em] uppercase text-sanctuary/60 mb-6">
               Multiplication Strategy
             </p>
             <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-light italic text-sanctuary leading-tight mb-8">

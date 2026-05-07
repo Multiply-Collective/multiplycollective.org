@@ -7,7 +7,7 @@ export default function GoldButton({ to, children, variant = 'filled', className
   
   const styles = {
     filled: `${base} bg-blue text-white hover:bg-blue-dark rounded-md`,
-    outline: `${base} border border-blue text-blue hover:bg-blue hover:text-white rounded-md`,
+    outline: `${base} border border-sanctuary text-sanctuary hover:bg-sanctuary hover:text-obsidian rounded-md`,
     dark: `${base} bg-obsidian text-white hover:bg-obsidian/80 rounded-md`,
   };
 

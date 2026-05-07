@@ -14,7 +14,7 @@ export default function VisionSection() {
           alt="Person standing on a hilltop at golden hour overlooking a vast landscape"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-obsidian/80 via-obsidian/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-obsidian via-obsidian/40 to-transparent" />
 
         {/* Floating offset text */}
         <div className="absolute inset-0 flex items-center px-6 md:px-12">

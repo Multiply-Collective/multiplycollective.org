@@ -14,7 +14,7 @@ export default function HeroSection() {
           alt="Morning light flooding a modern sacred gathering space"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-obsidian/40 via-obsidian/20 to-obsidian/70" />
+        <div className="absolute inset-0 bg-gradient-to-b from-obsidian/60 via-obsidian/40 to-obsidian/85" />
       </div>
 
       {/* Content */}

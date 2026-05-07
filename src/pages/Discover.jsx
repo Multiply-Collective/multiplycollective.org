@@ -44,7 +44,7 @@ export default function Discover() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-32 pb-20 md:pt-40 md:pb-32 px-6 md:px-12 bg-sanctuary">
+      <section className="pt-32 pb-20 md:pt-40 md:pb-32 px-6 md:px-12 bg-obsidian">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -52,10 +52,10 @@ export default function Discover() {
             transition={{ duration: 1 }}
           >
             <p className="text-xs font-body tracking-[0.3em] uppercase text-gold mb-6">Phase One</p>
-            <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-light italic text-obsidian leading-none mb-8">
+            <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-light italic text-sanctuary leading-none mb-8">
               Discover
             </h1>
-            <p className="font-body text-obsidian/60 text-base md:text-lg max-w-2xl leading-relaxed">
+            <p className="font-body text-sanctuary/60 text-base md:text-lg max-w-2xl leading-relaxed">
               Every follower of Jesus Christ has a call of God upon their life to multiply His Kingdom. The journey begins with a question: Is God calling me to plant? Through guided discernment, spiritual assessment, and relational connection, we help you explore that question with clarity and courage.
             </p>
           </motion.div>
@@ -65,12 +65,13 @@ export default function Discover() {
       <GoldLine className="max-w-7xl mx-auto" />
 
       {/* Contemplative Cards */}
-      <section className="py-20 md:py-32 px-6 md:px-12 bg-sanctuary">
+      <section className="py-20 md:py-32 px-6 md:px-12 bg-obsidian">
         <div className="max-w-7xl mx-auto">
           <SectionHeading
             eyebrow="Explore"
             title="Resources for the seeking heart"
             description="Hover to reveal each resource. Take your time — this is a season of seeking, not rushing."
+            light
           />
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mt-16">
@@ -127,6 +128,7 @@ export default function Discover() {
             >
               Continue to Develop →
             </a>
+
           </div>
         </div>
       </section>

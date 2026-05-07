@@ -13,8 +13,8 @@ export default function CTASection() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}>
           
-          <p className="text-xs font-body tracking-[0.3em] uppercase text-blue-light mb-6">
-            Ready to Begin?
+          <p className="text-xs font-body tracking-[0.3em] uppercase mb-6 text-[hsl(var(--foreground))]">READY TO BEGIN?
+
           </p>
           <h2 className="font-display text-4xl md:text-5xl lg:text-7xl font-bold text-sanctuary leading-tight max-w-4xl mx-auto mb-8">We believe that everyone is called.
 

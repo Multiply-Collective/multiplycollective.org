@@ -21,7 +21,7 @@ const resources = [
     description: 'A comprehensive handbook covering the theology, strategy, and practical steps of planting a healthy, multiplying church. From vision to community to launch day — this is the foundational guide for every church planter in our network.',
     category: 'Handbook',
     type: 'PDF',
-    link: null,
+    link: 'https://media.base44.com/files/public/69f91c5d31dad328146ca459/b4df5d690_Multiply_Collective_MARCH2026.docx',
   },
   {
     title: 'Church Planter Assessment',
@@ -56,7 +56,7 @@ export default function Resources() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 px-6 md:px-12 bg-sanctuary">
+      <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 px-6 md:px-12 bg-obsidian">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-end">
             <motion.div
@@ -65,10 +65,10 @@ export default function Resources() {
               transition={{ duration: 1 }}
             >
               <p className="text-xs font-body tracking-[0.3em] uppercase text-gold mb-6">The Arsenal</p>
-              <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-light italic text-obsidian leading-none mb-8">
+              <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-light italic text-sanctuary leading-none mb-8">
                 Resources
               </h1>
-              <p className="font-body text-obsidian/60 text-base md:text-lg max-w-xl leading-relaxed">
+              <p className="font-body text-sanctuary/60 text-base md:text-lg max-w-xl leading-relaxed">
                 Everything you need for the journey — downloadable guides, planning tools, 
                 and ministry materials crafted for church planters at every stage.
               </p>
@@ -92,10 +92,10 @@ export default function Resources() {
       <GoldLine className="max-w-7xl mx-auto" />
 
       {/* Filter + Resources */}
-      <section className="py-12 md:py-20 px-6 md:px-12 bg-sanctuary">
+      <section className="py-12 md:py-20 px-6 md:px-12 bg-obsidian">
         <div className="max-w-7xl mx-auto">
           {/* Filter Ribbon */}
-          <div className="sticky top-20 z-30 bg-sanctuary/95 backdrop-blur-sm py-4 mb-8 border-b border-border">
+          <div className="sticky top-20 z-30 bg-obsidian/95 backdrop-blur-sm py-4 mb-8 border-b border-sanctuary/10">
             <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
               {categories.map((cat) => (
                 <button
@@ -103,8 +103,8 @@ export default function Resources() {
                   onClick={() => setActiveFilter(cat)}
                   className={`px-4 py-2 text-xs font-body tracking-widest uppercase whitespace-nowrap transition-all duration-300 ${
                     activeFilter === cat
-                      ? 'bg-obsidian text-sanctuary'
-                      : 'text-obsidian/50 hover:text-obsidian border border-transparent hover:border-border'
+                      ? 'bg-sanctuary text-obsidian'
+                      : 'text-sanctuary/50 hover:text-sanctuary border border-transparent hover:border-sanctuary/20'
                   }`}
                 >
                   {cat}
@@ -114,7 +114,7 @@ export default function Resources() {
           </div>
 
           {/* Resource count */}
-          <p className="text-xs font-body tracking-wider text-muted-foreground mb-8">
+          <p className="text-xs font-body tracking-wider text-sanctuary/40 mb-8">
             {filteredResources.length} {filteredResources.length === 1 ? 'resource' : 'resources'} available
           </p>
 

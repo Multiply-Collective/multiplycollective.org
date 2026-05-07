@@ -19,7 +19,7 @@ export default function TimelineMilestone({ milestone, index, isLast }) {
       </div>
 
       {/* Milestone dot */}
-      <div className="absolute left-2 md:left-4 top-6 w-4 h-4 rounded-full border-2 border-gold bg-sanctuary z-10" />
+      <div className="absolute left-2 md:left-4 top-6 w-4 h-4 rounded-full border-2 border-blue bg-obsidian z-10" />
 
       {/* Content */}
       <div className="pl-12 md:pl-16 pb-12">
@@ -32,10 +32,10 @@ export default function TimelineMilestone({ milestone, index, isLast }) {
               <span className="text-xs font-body tracking-[0.2em] uppercase text-gold block mb-2">
                 {milestone.phase}
               </span>
-              <h3 className="font-display text-2xl md:text-3xl text-obsidian font-light group-hover:text-gold transition-colors duration-300">
+              <h3 className="font-display text-2xl md:text-3xl text-sanctuary font-light group-hover:text-blue-light transition-colors duration-300">
                 {milestone.title}
               </h3>
-              <p className="font-body text-sm text-obsidian/50 mt-2">
+              <p className="font-body text-sm text-sanctuary/50 mt-2">
                 {milestone.summary}
               </p>
             </div>
@@ -58,16 +58,16 @@ export default function TimelineMilestone({ milestone, index, isLast }) {
               transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
               className="overflow-hidden"
             >
-              <div className="pt-6 pb-2 border-t border-border mt-6">
+              <div className="pt-6 pb-2 border-t border-sanctuary/10 mt-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {milestone.strategies.map((strategy, i) => (
                     <div key={i} className="flex gap-3">
-                      <div className="w-1 h-1 rounded-full bg-gold mt-2 shrink-0" />
+                      <div className="w-1 h-1 rounded-full bg-blue-light mt-2 shrink-0" />
                       <div>
-                        <h4 className="font-body text-sm font-medium text-obsidian mb-1">
+                        <h4 className="font-body text-sm font-medium text-sanctuary mb-1">
                           {strategy.title}
                         </h4>
-                        <p className="font-body text-xs text-obsidian/50 leading-relaxed">
+                        <p className="font-body text-xs text-sanctuary/50 leading-relaxed">
                           {strategy.description}
                         </p>
                       </div>
