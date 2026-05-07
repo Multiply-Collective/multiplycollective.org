@@ -4,7 +4,7 @@ import { defineConfig } from 'vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: "/multiplycollective.org/",
+  base: "multiply-collective.github.io/multiplycollective.org/",
   logLevel: 'error', // Suppress warnings, only show errors
   plugins: [
     base44({
