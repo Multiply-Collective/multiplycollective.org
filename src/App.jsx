@@ -1,7 +1,8 @@
 import { Toaster } from "@/components/ui/toaster"
 import { QueryClientProvider } from '@tanstack/react-query'
 import { queryClientInstance } from '@/lib/query-client'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import PageNotFound from './lib/PageNotFound';
 import { AuthProvider, useAuth } from '@/lib/AuthContext';
 import UserNotRegisteredError from '@/components/UserNotRegisteredError';
@@ -16,6 +17,18 @@ import Resources from './pages/Resources';
 import Contact from './pages/Contact';
 
 const AuthenticatedApp = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  useEffect(() => {
+    // Handle GitHub Pages redirect for SPA routing
+    const searchParams = new URLSearchParams(location.search);
+    const redirect = searchParams.get('/');
+    if (redirect) {
+      navigate(redirect.replace(/~and~/g, '&'), { replace: true });
+    }
+  }, [location, navigate]);
+
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
 
   if (isLoadingPublicSettings || isLoadingAuth) {

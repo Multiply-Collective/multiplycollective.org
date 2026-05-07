@@ -1,6 +1,6 @@
-/** @type {import('tailwindcss').Config} */
 import tailwindcssAnimate from "tailwindcss-animate";
 
+/** @type {import('tailwindcss').Config} */
 export default {
     darkMode: ["class"],
     content: ["./index.html", "./src/**/*.{ts,tsx,js,jsx}"],
@@ -36,7 +36,7 @@ export default {
           dark: '#0D4490',
         },
         obsidian: '#111827',
-        sanctuary: '#F8FAFC',
+        sanctuary: '#F0F4F8',
         flame: '#FF6B2B',
   			card: {
   				DEFAULT: 'hsl(var(--card))',
