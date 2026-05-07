@@ -32,7 +32,8 @@ function App() {
           <Route path="*" element={<PageNotFound />} />
         </Routes>
         <Toaster />
-      </QueryClientProvider>
+      </Router>
+    </QueryClientProvider>
   )
 }
 
