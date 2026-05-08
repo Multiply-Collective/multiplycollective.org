@@ -24,14 +24,7 @@ export default function CTASection() {
 
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a
-              href="https://google.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 font-body text-sm tracking-widest uppercase px-8 py-4 bg-blue text-white hover:bg-blue-dark transition-all duration-500 rounded-md">
-              
-              Discover Your Calling
-            </a>
+            <GoldButton to="/discover">Discover Your Calling</GoldButton>
             <GoldButton to="/resources" variant="outline">Explore Resources</GoldButton>
           </div>
         </motion.div>

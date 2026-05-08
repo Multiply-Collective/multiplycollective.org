@@ -18,7 +18,7 @@ const steps = [
     title: 'Develop',
     subtitle: 'Your Gifts',
     description: 'Community is essential. Through coaching, training, and relational networks, we develop the character and competencies needed to multiply disciples and raise leaders.',
-    link: '/about',
+    link: '/develop',
   },
   {
     icon: Rocket,

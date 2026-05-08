@@ -152,9 +152,12 @@ export default function Develop() {
             <p className="font-body text-sanctuary/70 text-base leading-relaxed mb-12">
               Community is essential. Networking strengthens the mission and the individual through collaboration, training, coaching, and care. The Mentor is one of our five core values — because multiplication was never meant to happen in isolation.
             </p>
-            <GoldButton to="/contact" variant="outline">
+            <a
+              href="mailto:sfreeman@usacanadaregion.org"
+              className="inline-flex items-center gap-2 font-body text-sm tracking-widest uppercase px-8 py-4 border border-sanctuary text-sanctuary hover:bg-sanctuary hover:text-obsidian transition-all duration-500 rounded-md"
+            >
               Connect with a Coach
-            </GoldButton>
+            </a>
           </motion.div>
         </div>
       </section>
