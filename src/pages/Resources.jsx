@@ -14,7 +14,7 @@ const resources = [
     description: 'Every church planter needs someone in their corner. Our Coach-Mentor program pairs you with a certified, experienced leader who walks alongside you through every phase — from discernment to launch. Coaching is relational, personal, and built for multiplication.',
     category: 'Coach & Mentor',
     type: 'Program',
-    link: '/contact',
+    link: 'mailto:sfreeman@usacanadaregion.org',
   },
   {
     title: 'How to Plant a Church — Handbook',
