@@ -121,13 +121,13 @@ export default function Discover() {
           </div>
 
           <div className="mt-16">
-            <a
-              href="/develop"
+            <Link
+              to="/develop"
               onClick={() => window.scrollTo(0, 0)}
               className="inline-flex items-center gap-2 font-body text-sm tracking-widest uppercase px-8 py-4 border border-blue text-blue hover:bg-blue hover:text-white transition-all duration-500 rounded-md"
             >
               Continue to Develop →
-            </a>
+            </Link>
 
           </div>
         </div>

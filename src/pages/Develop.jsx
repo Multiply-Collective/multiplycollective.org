@@ -121,13 +121,13 @@ export default function Develop() {
           </div>
 
           <div className="mt-16">
-            <a
-              href="/deploy#top"
+            <Link
+              to="/deploy"
               onClick={() => window.scrollTo(0, 0)}
               className="inline-flex items-center gap-2 font-body text-sm tracking-widest uppercase px-8 py-4 border border-sanctuary text-sanctuary hover:bg-sanctuary hover:text-obsidian transition-all duration-500 rounded-md"
             >
               Continue to Deploy →
-            </a>
+            </Link>
           </div>
         </div>
       </section>
