@@ -26,18 +26,23 @@ export default function VisionSection() {
               transition={{ duration: 1 }}
               className="max-w-xl"
             >
-              <p className="text-xs font-body tracking-[0.3em] uppercase text-gold mb-6">
-                Our Vision
+              <p className="text-sm font-body tracking-[0.3em] uppercase text-gold mb-6">
+                
               </p>
               <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-light italic text-sanctuary leading-tight mb-6">
-                Empower the many to reach the one.
+                Why Multiply Collective?
               </h2>
-              <p className="font-body text-sanctuary/70 text-base leading-relaxed mb-8">
-                Multiply Collective exists to discover, develop, and deploy followers of Christ — 
-                making disciples, raising leaders, and forming networks that plant churches across 
-                the USA, Canada, and beyond.
-              </p>
-              <GoldButton to="/about">Learn More</GoldButton>
+              <div className="font-body text-sanctuary/70 text-lg leading-relaxed mb-8 space-y-3">
+                <p>We believe God is calling ordinary believers to participate in extraordinary kingdom multiplication. We help discover, develop, and deploy followers of Christ who will:</p>
+                <ul className="list-disc list-inside space-y-1 pl-2">
+                  <li>Make disciples</li>
+                  <li>Raise leaders</li>
+                  <li>Form networks</li>
+                  <li>Plant churches</li>
+                </ul>
+                <p>Through prayer, collaboration, coaching, assessment, training, and funding, we are building a multiplication movement across the USA/Canada Region.</p>
+              </div>
+
             </motion.div>
           </div>
         </div>

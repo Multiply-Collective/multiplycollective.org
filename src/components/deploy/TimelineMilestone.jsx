@@ -29,13 +29,13 @@ export default function TimelineMilestone({ milestone, index, isLast }) {
         >
           <div className="flex items-start justify-between gap-4">
             <div>
-              <span className="text-xs font-body tracking-[0.2em] uppercase text-gold block mb-2">
+              <span className="text-sm font-body tracking-[0.2em] uppercase text-gold block mb-2">
                 {milestone.phase}
               </span>
               <h3 className="font-display text-2xl md:text-3xl text-sanctuary font-light group-hover:text-blue-light transition-colors duration-300">
                 {milestone.title}
               </h3>
-              <p className="font-body text-sm text-sanctuary/50 mt-2">
+              <p className="font-body text-base text-sanctuary/50 mt-2">
                 {milestone.summary}
               </p>
             </div>
@@ -64,10 +64,10 @@ export default function TimelineMilestone({ milestone, index, isLast }) {
                     <div key={i} className="flex gap-3">
                       <div className="w-1 h-1 rounded-full bg-blue-light mt-2 shrink-0" />
                       <div>
-                        <h4 className="font-body text-sm font-medium text-sanctuary mb-1">
+                        <h4 className="font-body text-base font-medium text-sanctuary mb-1">
                           {strategy.title}
                         </h4>
-                        <p className="font-body text-xs text-sanctuary/50 leading-relaxed">
+                        <p className="font-body text-sm text-sanctuary/50 leading-relaxed">
                           {strategy.description}
                         </p>
                       </div>

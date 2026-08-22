@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import SectionHeading from '../components/shared/SectionHeading';
 import GoldLine from '../components/shared/GoldLine';
 import GoldButton from '../components/shared/GoldButton';
@@ -15,7 +14,7 @@ const resources = [
   {
     image: COACHING_IMG,
     title: 'Coaching',
-    description: 'Be paired with a certified Church Planting Mentor or Coach who walks alongside you — offering wisdom, accountability, and care as you grow into your calling.',
+    description: 'Be paired with a certified Church Planting Coach/Mentor who walks alongside you — offering wisdom, accountability, and care as you grow into your calling.',
   },
   {
     image: TRAINING_IMG,
@@ -37,7 +36,7 @@ const resources = [
 const developSteps = [
   { step: '01', title: 'Align', text: 'Align your language, assessments, and training with the Multiply Collective framework — ensuring a shared culture of multiplication from the start.' },
   { step: '02', title: 'Train', text: 'Engage in structured training that sharpens your leadership competencies, deepens your theological foundations, and clarifies your multiplication vision.' },
-  { step: '03', title: 'Coach', text: 'Meet regularly with a certified Church Planting Mentor or Coach. Community is essential — you don\'t go alone.' },
+  { step: '03', title: 'Coach/Mentor', text: 'Meet regularly with a certified Church Planting Coach/Mentor. Community is essential — you don\'t go alone.' },
   { step: '04', title: 'Network', text: 'Join a Multiplication Network built around Relationship, Resource, Residency, and Reproduction. Collaboration strengthens both the mission and the individual.' },
 ];
 
@@ -52,11 +51,11 @@ export default function Develop() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            <p className="text-xs font-body tracking-[0.3em] uppercase text-gold mb-6">Phase Two</p>
+            <p className="text-sm font-body tracking-[0.3em] uppercase text-gold mb-6">Phase Two</p>
             <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-light italic text-sanctuary leading-none mb-8">
               Develop
             </h1>
-            <p className="font-body text-sanctuary/60 text-base md:text-lg max-w-2xl leading-relaxed">
+            <p className="font-body text-sanctuary/60 text-lg md:text-xl max-w-2xl leading-relaxed">
               God's Kingdom can only be multiplied through His empowerment. In this phase, we walk alongside you through coaching, training, and relational networks — developing the character, competencies, and vision needed to multiply disciples, raise leaders, and plant churches.
             </p>
           </motion.div>
@@ -108,13 +107,13 @@ export default function Develop() {
                 transition={{ duration: 0.6, delay: i * 0.1 }}
                 className="border-b border-sanctuary/10 py-10 md:py-14 grid grid-cols-12 gap-4 items-baseline"
               >
-                <span className="col-span-2 md:col-span-1 text-gold/40 font-body text-xs tracking-widest">
+                <span className="col-span-2 md:col-span-1 text-gold/40 font-body text-sm tracking-widest">
                   {item.step}
                 </span>
                 <h3 className="col-span-10 md:col-span-3 font-display text-2xl md:text-3xl text-sanctuary font-light">
                   {item.title}
                 </h3>
-                <p className="col-span-12 md:col-span-8 font-body text-sanctuary/50 text-sm leading-relaxed md:pl-8">
+                <p className="col-span-12 md:col-span-8 font-body text-sanctuary/50 text-base leading-relaxed md:pl-8">
                   {item.text}
                 </p>
               </motion.div>
@@ -122,13 +121,13 @@ export default function Develop() {
           </div>
 
           <div className="mt-16">
-            <Link
-              to="/deploy"
+            <a
+              href="/deploy#top"
               onClick={() => window.scrollTo(0, 0)}
-              className="inline-flex items-center gap-2 font-body text-sm tracking-widest uppercase px-8 py-4 border border-sanctuary text-sanctuary hover:bg-sanctuary hover:text-obsidian transition-all duration-500 rounded-md"
+              className="inline-flex items-center gap-2 font-body text-base tracking-widest uppercase px-8 py-5 border border-sanctuary text-sanctuary hover:bg-sanctuary hover:text-obsidian transition-all duration-500 rounded-md"
             >
               Continue to Deploy →
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -143,22 +142,19 @@ export default function Develop() {
             transition={{ duration: 0.8 }}
             className="max-w-3xl mx-auto text-center"
           >
-            <p className="text-xs font-body tracking-[0.3em] uppercase text-sanctuary/60 mb-6">
+            <p className="text-sm font-body tracking-[0.3em] uppercase text-sanctuary/60 mb-6">
               Core Value
             </p>
             <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-light italic text-sanctuary leading-tight mb-8">
               We don't go alone
             </h2>
             <GoldLine className="w-16 mx-auto mb-8" />
-            <p className="font-body text-sanctuary/70 text-base leading-relaxed mb-12">
-              Community is essential. Networking strengthens the mission and the individual through collaboration, training, coaching, and care. The Mentor is one of our five core values — because multiplication was never meant to happen in isolation.
+            <p className="font-body text-sanctuary/70 text-lg leading-relaxed mb-12">
+              Community is essential. Networking strengthens the mission and the individual through collaboration, training, coaching, and care. The Coach/Mentor is one of our five core values — because multiplication was never meant to happen in isolation.
             </p>
-            <a
-              href="mailto:sfreeman@usacanadaregion.org"
-              className="inline-flex items-center gap-2 font-body text-sm tracking-widest uppercase px-8 py-4 border border-sanctuary text-sanctuary hover:bg-sanctuary hover:text-obsidian transition-all duration-500 rounded-md"
-            >
-              Connect with a Coach
-            </a>
+            <GoldButton to="/contact" variant="outline">
+              Connect with a Coach/Mentor
+            </GoldButton>
           </motion.div>
         </div>
       </section>

@@ -49,7 +49,7 @@ const milestones = [
       { title: 'Launch Sunday', description: 'Execute a compelling, well-planned first official gathering that reflects your community\'s identity.' },
       { title: 'Follow-Up System', description: 'Implement a relational follow-up process for every first-time guest.' },
       { title: 'Multiplication DNA', description: 'From day one, cast vision for multiplication — every church plant should be planning to plant another.' },
-      { title: 'Coaching Continuation', description: 'Maintain your coaching relationship for ongoing support through the critical first year.' },
+      { title: 'Coach/Mentor Continuation', description: 'Maintain your coach/mentor relationship for ongoing support through the critical first year.' },
     ],
   },
 ];
@@ -72,7 +72,7 @@ export default function Deploy() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.3 }}
             >
-              <p className="text-xs font-body tracking-[0.3em] uppercase text-gold mb-4">Phase Three</p>
+              <p className="text-sm font-body tracking-[0.3em] uppercase text-gold mb-4">Phase Three</p>
               <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-light italic text-sanctuary leading-none">
                 Deploy
               </h1>
@@ -121,17 +121,17 @@ export default function Deploy() {
             transition={{ duration: 0.8 }}
             className="max-w-3xl mx-auto text-center"
           >
-            <p className="text-xs font-body tracking-[0.3em] uppercase text-sanctuary/60 mb-6">
+            <p className="text-sm font-body tracking-[0.3em] uppercase text-sanctuary/60 mb-6">
               Multiplication Strategy
             </p>
             <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-light italic text-sanctuary leading-tight mb-8">
               Every church plant carries the seed of another
             </h2>
             <GoldLine className="w-16 mx-auto mb-8" />
-            <p className="font-body text-sanctuary/70 text-base leading-relaxed mb-4">
-              From day one, every planter casts vision for multiplication. We coach every planter to think generationally: who are you raising up? What is the next expression of church that will emerge from this one?
+            <p className="font-body text-sanctuary/70 text-lg leading-relaxed mb-4">
+              From day one, every planter casts vision for multiplication. We coach/mentor every planter to think generationally: who are you raising up? What is the next expression of church that will emerge from this one?
             </p>
-            <p className="font-body text-sanctuary/70 text-base leading-relaxed mb-12">
+            <p className="font-body text-sanctuary/70 text-lg leading-relaxed mb-12">
               Multiply Collective partners with global multiplication movements including DCPI and Exponential, hosting yearly practitioner collaborations that strengthen the network and sharpen the mission.
             </p>
             <GoldButton to="/resources" variant="outline">

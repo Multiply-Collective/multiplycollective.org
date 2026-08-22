@@ -33,7 +33,7 @@ export default function HeroSection() {
           animate={{ opacity: 1 }}
           transition={{ duration: 1.5, delay: 0.7 }}
         >
-          <p className="text-xs font-body tracking-[0.4em] uppercase text-blue-light mb-6">
+          <p className="text-sm font-body tracking-[0.4em] uppercase text-blue-light mb-6">
             Discover · Develop · Deploy
           </p>
         </motion.div>
@@ -42,9 +42,9 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.9 }}
-          className="font-body text-sanctuary/80 text-base md:text-lg max-w-xl leading-relaxed mb-10"
+          className="font-body text-sanctuary/80 text-lg md:text-xl max-w-xl leading-relaxed mb-10"
         >
-          Empowering the many to reach the one — discovering, developing, and deploying followers of Christ to make disciples, raise leaders, and form networks that plant churches.
+          The Church Planting Initiative of the Church of the Nazarene USA/Canada Region
         </motion.p>
 
         <motion.div
@@ -53,8 +53,13 @@ export default function HeroSection() {
           transition={{ duration: 1, delay: 1.2 }}
           className="flex flex-wrap gap-4"
         >
-          <GoldButton to="/discover">Begin the Journey</GoldButton>
-          <GoldButton to="/about" variant="outline">Our Story</GoldButton>
+          <a
+            href="mailto:#"
+            className="inline-flex items-center gap-2 font-body text-base tracking-widest uppercase px-8 py-5 bg-blue text-white hover:bg-blue-dark transition-all duration-500 rounded-md"
+          >
+            Connect With Us
+          </a>
+          <GoldButton to="/resources" variant="outline">Resources</GoldButton>
         </motion.div>
       </div>
 

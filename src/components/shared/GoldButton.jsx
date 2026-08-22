@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 export default function GoldButton({ to, children, variant = 'filled', className = '' }) {
-  const base = "inline-flex items-center gap-2 font-body text-sm tracking-widest uppercase px-8 py-4 transition-all duration-500";
+  const base = "inline-flex items-center gap-2 font-body text-base tracking-widest uppercase px-8 py-5 transition-all duration-500";
   
   const styles = {
     filled: `${base} bg-blue text-white hover:bg-blue-dark rounded-md`,

@@ -1,23 +1,32 @@
-# Multiply Collective
+**Welcome to your Base44 project** 
 
-A collective movement planting churches in homes, communities, and cities. Discover your calling, develop your gifts, deploy into mission.
+**About**
 
-## Getting Started
+View and Edit  your app on [Base44.com](http://Base44.com) 
 
-1. Clone the repository
-2. Install dependencies: `npm install`
-3. Run the development server: `npm run dev`
-4. Build for production: `npm run build`
-5. Deploy to GitHub Pages: `npm run deploy`
+This project contains everything you need to run your app locally.
 
-## Tech Stack
+**Edit the code in your local development environment**
 
-- React 18
-- Vite
-- Tailwind CSS
-- React Router
-- Radix UI Components
-- TanStack Query
+Any change pushed to the repo will also be reflected in the Base44 Builder.
+
+**Prerequisites:** 
+
+1. Clone the repository using the project's Git URL 
+2. Navigate to the project directory
+3. Install dependencies: `npm install`
+4. Create an `.env.local` file and set the right environment variables
+
+```
+VITE_BASE44_APP_ID=your_app_id
+VITE_BASE44_APP_BASE_URL=your_backend_url
+
+e.g.
+VITE_BASE44_APP_ID=cbef744a8545c389ef439ea6
+VITE_BASE44_APP_BASE_URL=https://my-to-do-list-81bfaad7.base44.app
+```
+
+Run the app: `npm run dev`
 
 **Publish your changes**
 

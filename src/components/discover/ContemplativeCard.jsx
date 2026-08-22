@@ -30,7 +30,7 @@ export default function ContemplativeCard({ image, title, description, index }) 
           {/* Revealed on hover */}
           <div className="overflow-hidden max-h-0 group-hover:max-h-40 transition-all duration-700 ease-out">
             <div className="w-8 h-px bg-gold mb-4" />
-            <p className="font-body text-sm text-sanctuary/70 leading-relaxed">
+            <p className="font-body text-base text-sanctuary/70 leading-relaxed">
               {description}
             </p>
           </div>

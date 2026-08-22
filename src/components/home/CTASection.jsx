@@ -13,18 +13,25 @@ export default function CTASection() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}>
           
-          <p className="text-xs font-body tracking-[0.3em] uppercase mb-6 text-[hsl(var(--foreground))]">READY TO BEGIN?
+          <p className="text-sm font-body tracking-[0.3em] uppercase mb-6 text-[hsl(var(--foreground))]">READY TO BEGIN?
 
           </p>
           <h2 className="font-display text-4xl md:text-5xl lg:text-7xl font-bold text-sanctuary leading-tight max-w-4xl mx-auto mb-8">We believe that everyone is called.
 
           </h2>
           <GoldLine className="w-16 mx-auto mb-8" />
-          <p className="font-body text-sanctuary/70 text-base md:text-lg max-w-2xl mx-auto leading-relaxed mb-12">Every Follower of Jesus Christ has a Call of God upon their life to Multiply God’s Kingdom. Whether you're sensing a call or ready to launch — there's a place for you here.
+          <p className="font-body text-sanctuary/70 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mb-12">Every Follower of Jesus Christ has a Call of God upon their life to Multiply God’s Kingdom. Whether you're sensing a call or ready to launch — there's a place for you here.
 
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <GoldButton to="/discover">Discover Your Calling</GoldButton>
+            <a
+              href="https://google.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 font-body text-base tracking-widest uppercase px-8 py-5 bg-blue text-white hover:bg-blue-dark transition-all duration-500 rounded-md">
+              
+              Discover Your Calling
+            </a>
             <GoldButton to="/resources" variant="outline">Explore Resources</GoldButton>
           </div>
         </motion.div>

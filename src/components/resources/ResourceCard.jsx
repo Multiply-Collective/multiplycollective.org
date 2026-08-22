@@ -16,15 +16,15 @@ export default function ResourceCard({ resource, index }) {
           <h3 className="font-body text-sm font-medium text-sanctuary group-hover:text-blue-light transition-colors duration-500">
             {resource.title}
           </h3>
-          <p className="font-body text-xs text-sanctuary/50 mt-1 leading-relaxed">
+          <p className="font-body text-sm text-sanctuary/50 mt-1 leading-relaxed">
             {resource.description}
           </p>
           <div className="flex items-center gap-3 mt-2">
-            <span className="text-xs font-body tracking-wider uppercase text-blue-light/60">
+            <span className="text-sm font-body tracking-wider uppercase text-blue-light/60">
               {resource.category}
             </span>
             <span className="text-xs text-sanctuary/30">·</span>
-            <span className="text-xs text-sanctuary/40 font-body">
+            <span className="text-sm text-sanctuary/40 font-body">
               {resource.type}
             </span>
           </div>

@@ -22,11 +22,11 @@ export default function Contact() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            <p className="text-xs font-body tracking-[0.3em] uppercase text-gold mb-6">Get in Touch</p>
+            <p className="text-sm font-body tracking-[0.3em] uppercase text-gold mb-6">Get in Touch</p>
             <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-light italic text-sanctuary leading-none mb-8">
               Contact Us
             </h1>
-            <p className="font-body text-sanctuary/60 text-base md:text-lg max-w-xl leading-relaxed">
+            <p className="font-body text-sanctuary/60 text-lg md:text-xl max-w-xl leading-relaxed">
               Whether you're sensing a call, ready to launch, or simply want to learn more — 
               we'd love to hear from you.
             </p>
@@ -54,20 +54,20 @@ export default function Contact() {
             />
             <div className="mt-12 space-y-8">
               <div>
-                <p className="text-xs font-body tracking-[0.2em] uppercase text-gold mb-2">Email</p>
-                <p className="font-body text-sanctuary/70">hello@multiplycollective.org</p>
+                <p className="text-sm font-body tracking-[0.2em] uppercase text-gold mb-2">Email</p>
+                <p className="font-body text-base text-sanctuary/70">hello@multiplycollective.org</p>
               </div>
               <div>
-                <p className="text-xs font-body tracking-[0.2em] uppercase text-blue-light mb-2">Response Time</p>
-                <p className="font-body text-sanctuary/70">Within 48 hours</p>
+                <p className="text-sm font-body tracking-[0.2em] uppercase text-blue-light mb-2">Response Time</p>
+                <p className="font-body text-base text-sanctuary/70">Within 48 hours</p>
               </div>
               <div>
-                <p className="text-xs font-body tracking-[0.2em] uppercase text-blue-light mb-4">The Pathway</p>
+                <p className="text-sm font-body tracking-[0.2em] uppercase text-blue-light mb-4">The Pathway</p>
                 <div className="space-y-2">
                   {['Discover Your Calling', 'Develop Your Gifts', 'Deploy Into Mission'].map((s) => (
                     <div key={s} className="flex items-center gap-3">
                       <div className="w-1 h-1 rounded-full bg-blue-light" />
-                      <p className="font-body text-sm text-sanctuary/60">{s}</p>
+                      <p className="font-body text-base text-sanctuary/60">{s}</p>
                     </div>
                   ))}
                 </div>
@@ -86,7 +86,7 @@ export default function Contact() {
                 <div>
                   <div className="w-12 h-px bg-gold mx-auto mb-8" />
                   <h3 className="font-display text-3xl text-sanctuary mb-4">Thank you.</h3>
-                  <p className="font-body text-sanctuary/60 text-sm leading-relaxed max-w-sm mx-auto">
+                  <p className="font-body text-sanctuary/60 text-base leading-relaxed max-w-sm mx-auto">
                     We've received your message and will be in touch within 48 hours.
                   </p>
                 </div>
@@ -94,52 +94,52 @@ export default function Contact() {
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label className="block text-xs font-body tracking-[0.2em] uppercase text-sanctuary/50 mb-2">Full Name</label>
+                  <label className="block text-sm font-body tracking-[0.2em] uppercase text-sanctuary/50 mb-2">Full Name</label>
                   <input
                     type="text"
                     required
                     value={form.name}
                     onChange={(e) => setForm({ ...form, name: e.target.value })}
-                    className="w-full border-b border-sanctuary/20 bg-transparent py-3 font-body text-sm text-sanctuary placeholder:text-sanctuary/30 focus:outline-none focus:border-blue-light transition-colors"
+                    className="w-full border-b border-sanctuary/20 bg-transparent py-3 font-body text-base text-sanctuary placeholder:text-sanctuary/30 focus:outline-none focus:border-blue-light transition-colors"
                     placeholder="Your name"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-body tracking-[0.2em] uppercase text-sanctuary/50 mb-2">Email</label>
+                  <label className="block text-sm font-body tracking-[0.2em] uppercase text-sanctuary/50 mb-2">Email</label>
                   <input
                     type="email"
                     required
                     value={form.email}
                     onChange={(e) => setForm({ ...form, email: e.target.value })}
-                    className="w-full border-b border-sanctuary/20 bg-transparent py-3 font-body text-sm text-sanctuary placeholder:text-sanctuary/30 focus:outline-none focus:border-blue-light transition-colors"
+                    className="w-full border-b border-sanctuary/20 bg-transparent py-3 font-body text-base text-sanctuary placeholder:text-sanctuary/30 focus:outline-none focus:border-blue-light transition-colors"
                     placeholder="your@email.com"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-body tracking-[0.2em] uppercase text-sanctuary/50 mb-2">Where are you in the journey?</label>
+                  <label className="block text-sm font-body tracking-[0.2em] uppercase text-sanctuary/50 mb-2">Where are you in the journey?</label>
                   <select
                     value={form.stage}
                     onChange={(e) => setForm({ ...form, stage: e.target.value })}
-                    className="w-full border-b border-sanctuary/20 bg-obsidian py-3 font-body text-sm text-sanctuary focus:outline-none focus:border-blue-light transition-colors appearance-none"
+                    className="w-full border-b border-sanctuary/20 bg-obsidian py-3 font-body text-base text-sanctuary focus:outline-none focus:border-blue-light transition-colors appearance-none"
                   >
                     <option value="" className="bg-obsidian">Select a stage</option>
                     <option value="discover" className="bg-obsidian">Discover — Exploring a calling</option>
-                    <option value="develop" className="bg-obsidian">Develop — In training or coaching</option>
+                    <option value="develop" className="bg-obsidian">Develop — In training or coaching/mentoring</option>
                     <option value="deploy" className="bg-obsidian">Deploy — Ready to launch</option>
                     <option value="other" className="bg-obsidian">Other</option>
                   </select>
                 </div>
 
                 <div>
-                  <label className="block text-xs font-body tracking-[0.2em] uppercase text-sanctuary/50 mb-2">Message</label>
+                  <label className="block text-sm font-body tracking-[0.2em] uppercase text-sanctuary/50 mb-2">Message</label>
                   <textarea
                     required
                     rows={5}
                     value={form.message}
                     onChange={(e) => setForm({ ...form, message: e.target.value })}
-                    className="w-full border-b border-sanctuary/20 bg-transparent py-3 font-body text-sm text-sanctuary placeholder:text-sanctuary/30 focus:outline-none focus:border-blue-light transition-colors resize-none"
+                    className="w-full border-b border-sanctuary/20 bg-transparent py-3 font-body text-base text-sanctuary placeholder:text-sanctuary/30 focus:outline-none focus:border-blue-light transition-colors resize-none"
                     placeholder="Tell us about yourself and your vision..."
                   />
                 </div>
@@ -147,7 +147,7 @@ export default function Contact() {
                 <div className="pt-4">
                   <button
                     type="submit"
-                    className="inline-flex items-center gap-2 font-body text-sm tracking-widest uppercase px-8 py-4 bg-gold text-sanctuary hover:bg-gold-dark transition-colors duration-300"
+                    className="inline-flex items-center gap-2 font-body text-base tracking-widest uppercase px-8 py-5 bg-gold text-sanctuary hover:bg-gold-dark transition-colors duration-300"
                   >
                     Send Message
                   </button>

@@ -1,8 +1,10 @@
 import { Toaster } from "@/components/ui/toaster"
 import { QueryClientProvider } from '@tanstack/react-query'
 import { queryClientInstance } from '@/lib/query-client'
-import { HashRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import PageNotFound from './lib/PageNotFound';
+import { AuthProvider, useAuth } from '@/lib/AuthContext';
+import UserNotRegisteredError from '@/components/UserNotRegisteredError';
 
 import SiteLayout from './components/layout/SiteLayout';
 import Home from './pages/Home';
@@ -11,9 +13,33 @@ import Discover from './pages/Discover';
 import Deploy from './pages/Deploy';
 import Develop from './pages/Develop';
 import Resources from './pages/Resources';
+import Events from './pages/Events';
+import MeetTheTeam from './pages/MeetTheTeam';
 import Contact from './pages/Contact';
 
-const AppContent = () => {
+const AuthenticatedApp = () => {
+  const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
+
+  if (isLoadingPublicSettings || isLoadingAuth) {
+    return (
+      <div className="fixed inset-0 flex items-center justify-center bg-sanctuary">
+        <div className="flex flex-col items-center gap-4">
+          <div className="w-8 h-8 border-2 border-gold/30 border-t-gold rounded-full animate-spin"></div>
+          <span className="font-display text-sm tracking-widest text-obsidian/40">Loading</span>
+        </div>
+      </div>
+    );
+  }
+
+  if (authError) {
+    if (authError.type === 'user_not_registered') {
+      return <UserNotRegisteredError />;
+    } else if (authError.type === 'auth_required') {
+      navigateToLogin();
+      return null;
+    }
+  }
+
   return (
     <Routes>
       <Route element={<SiteLayout />}>
@@ -23,6 +49,8 @@ const AppContent = () => {
         <Route path="/develop" element={<Develop />} />
         <Route path="/deploy" element={<Deploy />} />
         <Route path="/resources" element={<Resources />} />
+        <Route path="/events" element={<Events />} />
+        <Route path="/meet-the-team" element={<MeetTheTeam />} />
         <Route path="/contact" element={<Contact />} />
       </Route>
       <Route path="*" element={<PageNotFound />} />
@@ -32,12 +60,14 @@ const AppContent = () => {
 
 function App() {
   return (
-    <QueryClientProvider client={queryClientInstance}>
-      <Router>
-        <AppContent />
-      </Router>
-      <Toaster />
-    </QueryClientProvider>
+    <AuthProvider>
+      <QueryClientProvider client={queryClientInstance}>
+        <Router>
+          <AuthenticatedApp />
+        </Router>
+        <Toaster />
+      </QueryClientProvider>
+    </AuthProvider>
   )
 }
 

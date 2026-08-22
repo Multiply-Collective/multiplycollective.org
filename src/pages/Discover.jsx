@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import SectionHeading from '../components/shared/SectionHeading';
 import GoldLine from '../components/shared/GoldLine';
 import GoldButton from '../components/shared/GoldButton';
@@ -19,7 +18,7 @@ const resources = [
   },
   {
     image: GATHERING_IMG,
-    title: 'Connect with a Coach',
+    title: 'Connect with a Coach/Mentor',
     description: 'Be matched with an experienced church planter who will walk alongside you through the discernment process — offering wisdom, encouragement, and honest feedback.',
   },
   {
@@ -37,7 +36,7 @@ const resources = [
 const journeySteps = [
   { step: '01', title: 'Pray', text: 'God\'s Kingdom can only be multiplied through His empowerment. Begin in prayer and complete dependence on the Holy Spirit.' },
   { step: '02', title: 'Assess', text: 'Complete the Calling Assessment to understand your readiness, spiritual gifts, and leadership capacity.' },
-  { step: '03', title: 'Connect', text: 'Community is essential. Meet with a certified coach or mentor who will walk alongside you through the discernment process.' },
+  { step: '03', title: 'Connect', text: 'Community is essential. Meet with a certified coach/mentor who will walk alongside you through the discernment process.' },
   { step: '04', title: 'Clarify', text: 'Attend a Vision Workshop to articulate your calling, define your target community, and take your first steps toward multiplication.' },
 ];
 
@@ -52,11 +51,11 @@ export default function Discover() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            <p className="text-xs font-body tracking-[0.3em] uppercase text-gold mb-6">Phase One</p>
+            <p className="text-sm font-body tracking-[0.3em] uppercase text-gold mb-6">Phase One</p>
             <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-light italic text-sanctuary leading-none mb-8">
               Discover
             </h1>
-            <p className="font-body text-sanctuary/60 text-base md:text-lg max-w-2xl leading-relaxed">
+            <p className="font-body text-sanctuary/60 text-lg md:text-xl max-w-2xl leading-relaxed">
               Every follower of Jesus Christ has a call of God upon their life to multiply His Kingdom. The journey begins with a question: Is God calling me to plant? Through guided discernment, spiritual assessment, and relational connection, we help you explore that question with clarity and courage.
             </p>
           </motion.div>
@@ -108,13 +107,13 @@ export default function Discover() {
                 transition={{ duration: 0.6, delay: i * 0.1 }}
                 className="border-b border-sanctuary/10 py-10 md:py-14 grid grid-cols-12 gap-4 items-baseline"
               >
-                <span className="col-span-2 md:col-span-1 text-gold/40 font-body text-xs tracking-widest">
+                <span className="col-span-2 md:col-span-1 text-gold/40 font-body text-sm tracking-widest">
                   {item.step}
                 </span>
                 <h3 className="col-span-10 md:col-span-3 font-display text-2xl md:text-3xl text-sanctuary font-light">
                   {item.title}
                 </h3>
-                <p className="col-span-12 md:col-span-8 font-body text-sanctuary/50 text-sm leading-relaxed md:pl-8">
+                <p className="col-span-12 md:col-span-8 font-body text-sanctuary/50 text-base leading-relaxed md:pl-8">
                   {item.text}
                 </p>
               </motion.div>
@@ -122,13 +121,13 @@ export default function Discover() {
           </div>
 
           <div className="mt-16">
-            <Link
-              to="/develop"
+            <a
+              href="/develop"
               onClick={() => window.scrollTo(0, 0)}
-              className="inline-flex items-center gap-2 font-body text-sm tracking-widest uppercase px-8 py-4 border border-blue text-blue hover:bg-blue hover:text-white transition-all duration-500 rounded-md"
+              className="inline-flex items-center gap-2 font-body text-base tracking-widest uppercase px-8 py-5 border border-blue text-blue hover:bg-blue hover:text-white transition-all duration-500 rounded-md"
             >
               Continue to Develop →
-            </Link>
+            </a>
 
           </div>
         </div>

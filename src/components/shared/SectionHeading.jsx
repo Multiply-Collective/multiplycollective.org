@@ -11,7 +11,7 @@ export default function SectionHeading({ eyebrow, title, description, align = 'l
       className={`max-w-3xl ${align === 'center' ? 'mx-auto text-center' : ''}`}
     >
       {eyebrow && (
-        <p className={`text-xs font-body tracking-[0.3em] uppercase mb-4 ${
+        <p className={`text-sm font-body tracking-[0.3em] uppercase mb-4 ${
           light ? 'text-blue-light' : 'text-blue'
         }`}>
           {eyebrow}
@@ -23,7 +23,7 @@ export default function SectionHeading({ eyebrow, title, description, align = 'l
         {title}
       </h2>
       {description && (
-        <p className={`font-body text-base md:text-lg leading-relaxed ${
+        <p className={`font-body text-lg md:text-xl leading-relaxed ${
           light ? 'text-sanctuary/70' : 'text-obsidian/60'
         }`}>
           {description}
