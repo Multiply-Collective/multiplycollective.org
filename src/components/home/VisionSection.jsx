@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import GoldButton from '../shared/GoldButton';
 
 const VISION_IMG = "https://media.base44.com/images/public/69f91c5d31dad328146ca459/96a5c5c7a_generated_image.png";
 

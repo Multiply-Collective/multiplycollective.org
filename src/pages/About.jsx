@@ -1,8 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import SectionHeading from '../components/shared/SectionHeading';
-import GoldLine from '../components/shared/GoldLine';
-import GoldButton from '../components/shared/GoldButton';
 
 const ABOUT_IMG = "https://media.base44.com/images/public/69f91c5d31dad328146ca459/ccd03d367_generated_image.png";
 const GROWTH_IMG = "https://media.base44.com/images/public/69f91c5d31dad328146ca459/4658c6069_generated_image.png";

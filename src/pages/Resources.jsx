@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { useLocation } from 'react-router-dom';
-import SectionHeading from '../components/shared/SectionHeading';
 import GoldLine from '../components/shared/GoldLine';
 import ResourceCard from '../components/resources/ResourceCard';
 
