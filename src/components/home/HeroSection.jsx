@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import GoldButton from '../shared/GoldButton';
 
 const HERO_IMG = "https://media.base44.com/images/public/69f91c5d31dad328146ca459/539e6ad2f_generated_image.png";
+const LOGO = "https://media.base44.com/images/public/69f91c5d31dad328146ca459/0e37a95f9_MultiplyCollectiveLogo5_Blue-Gray_Modifiedforwebsite.png";
 
 export default function HeroSection() {
   return (
@@ -19,14 +20,18 @@ export default function HeroSection() {
 
       {/* Content */}
       <div className="relative z-10 h-full flex flex-col justify-end pb-20 md:pb-32 px-6 md:px-12 max-w-7xl mx-auto">
-        <motion.h1
+        <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-          className="font-display text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-sanctuary leading-none mb-6"
+          className="mb-6"
         >
-          Multiply Collective
-        </motion.h1>
+          <img
+            src={LOGO}
+            alt="Multiply Collective"
+            className="w-80 sm:w-[26rem] md:w-[36rem] lg:w-[46rem] max-w-full h-auto drop-shadow-lg"
+          />
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0 }}
