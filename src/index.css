@@ -9,7 +9,7 @@
     --font-display: 'DM Sans', sans-serif;
     --font-body: 'DM Sans', sans-serif;
 
-    --background: 220 20% 10%;
+    --background: 220 20% 0%;
     --foreground: 214 20% 95%;
     --card: 220 20% 13%;
     --card-foreground: 214 20% 95%;
@@ -46,7 +46,7 @@
   }
 
   .dark {
-    --background: 220 20% 8%;
+    --background: 220 20% 0%;
     --foreground: 214 20% 95%;
     --card: 220 20% 11%;
     --card-foreground: 214 20% 95%;

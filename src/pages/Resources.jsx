@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { useLocation } from 'react-router-dom';
+import SectionHeading from '../components/shared/SectionHeading';
 import GoldLine from '../components/shared/GoldLine';
 import ResourceCard from '../components/resources/ResourceCard';
 
@@ -21,7 +22,7 @@ const resources = [
   description: 'A few-day comprehensive evaluation designed to help prospective church planters discern capacity and readiness to plant a church. Assessment Centers provide valuable feedback that helps planters prepare for the development stage.',
   category: 'Discover',
   type: 'Assessment Tool',
-  link: null
+  link: '/events'
 },
 {
   title: 'Church Planting Coaching',

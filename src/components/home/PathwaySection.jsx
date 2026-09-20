@@ -4,8 +4,7 @@ import { Link } from 'react-router-dom';
 import { Compass, Sprout, Rocket, ArrowUpRight } from 'lucide-react';
 import GoldLine from '../shared/GoldLine';
 import SectionHeading from '../shared/SectionHeading';
-
-const LOGO = "https://media.base44.com/images/public/69f91c5d31dad328146ca459/a83f694ef_multiplycollective.jpg";
+import VideoPlaceholder from './VideoPlaceholder';
 
 const steps = [
 {
@@ -53,19 +52,7 @@ export default function PathwaySection() {
   return (
     <section className="py-24 md:py-40 px-6 md:px-12 bg-obsidian">
       <div className="max-w-7xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true, margin: '-80px' }}
-          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-          className="flex justify-center mb-12"
-        >
-          <img
-            src={LOGO}
-            alt="Multiply Collective Logo"
-            className="w-32 h-32 md:w-40 md:h-40 object-cover rounded-2xl ring-1 ring-sanctuary/15 shadow-lg"
-          />
-        </motion.div>
+        <VideoPlaceholder />
 
         <SectionHeading
           eyebrow="The Pathway"

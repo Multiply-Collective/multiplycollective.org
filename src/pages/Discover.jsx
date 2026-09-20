@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import SectionHeading from '../components/shared/SectionHeading';
 import GoldLine from '../components/shared/GoldLine';
+import GoldButton from '../components/shared/GoldButton';
 import ContemplativeCard from '../components/discover/ContemplativeCard';
 
 const DISCOVER_IMG = "https://media.base44.com/images/public/69f91c5d31dad328146ca459/10febc560_generated_image.png";

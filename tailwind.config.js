@@ -33,7 +33,7 @@ module.exports = {
           light: '#1A6FD4',
           dark: '#0D4490',
         },
-        obsidian: '#111827',
+        obsidian: '#000000',
         sanctuary: '#F0F4F8',
         flame: '#FF6B2B',
   			card: {
