@@ -59,7 +59,7 @@ export default function HeroSection() {
           className="flex flex-wrap gap-4"
         >
           <a
-            href="mailto:#"
+            href="#newsletter"
             className="inline-flex items-center gap-2 font-body text-base tracking-widest uppercase px-8 py-5 bg-blue text-white hover:bg-blue-dark transition-all duration-500 rounded-md"
           >
             Connect With Us

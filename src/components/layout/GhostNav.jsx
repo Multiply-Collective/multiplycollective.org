@@ -14,6 +14,7 @@ const navLinks = [
     ],
   },
   { label: 'Events', path: '/events' },
+  { label: 'Training', path: '/training' },
   { label: 'Resources', path: '/resources' },
 ];
 

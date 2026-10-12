@@ -17,11 +17,13 @@ export default function SectionHeading({ eyebrow, title, description, align = 'l
           {eyebrow}
         </p>
       )}
-      <h2 className={`font-display text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight mb-6 ${
-        light ? 'text-sanctuary' : 'text-obsidian'
-      }`}>
-        {title}
-      </h2>
+      {title && (
+        <h2 className={`font-display text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight mb-6 ${
+          light ? 'text-sanctuary' : 'text-obsidian'
+        }`}>
+          {title}
+        </h2>
+      )}
       {description && (
         <p className={`font-body text-lg md:text-xl leading-relaxed ${
           light ? 'text-sanctuary/70' : 'text-obsidian/60'

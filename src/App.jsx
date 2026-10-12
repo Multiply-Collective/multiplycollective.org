@@ -16,6 +16,7 @@ import Resources from './pages/Resources';
 import Events from './pages/Events';
 import MeetTheTeam from './pages/MeetTheTeam';
 import Contact from './pages/Contact';
+import Training from './pages/Training';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -49,6 +50,7 @@ const AuthenticatedApp = () => {
         <Route path="/develop" element={<Develop />} />
         <Route path="/deploy" element={<Deploy />} />
         <Route path="/resources" element={<Resources />} />
+        <Route path="/training" element={<Training />} />
         <Route path="/events" element={<Events />} />
         <Route path="/meet-the-team" element={<MeetTheTeam />} />
         <Route path="/contact" element={<Contact />} />

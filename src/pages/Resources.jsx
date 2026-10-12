@@ -15,7 +15,7 @@ const resources = [
   description: 'A step-by-step guide to help church planters navigate the journey from calling to launch and multiplication. The handbook provides practical guidance, resources, and next steps for every stage of the church planting process.',
   category: 'Discover',
   type: 'PDF',
-  link: 'https://media.base44.com/files/public/69f91c5d31dad328146ca459/b4df5d690_Multiply_Collective_MARCH2026.docx'
+  link: 'https://media.base44.com/files/public/69f91c5d31dad328146ca459/ba95f7b8e_ChurchPlantingHandbook2026.pdf'
 },
 {
   title: 'Assessment Centers',
@@ -29,14 +29,14 @@ const resources = [
   description: 'Personalized guidance from an experienced church planter or ministry leader who walks alongside you throughout the planting journey. Coaches provide encouragement, accountability, wisdom, and practical support as you move from vision to launch and beyond.',
   category: 'Develop',
   type: 'Program',
-  link: '/contact'
+  link: 'mailto:sfreeman@usacanadaregion.org'
 },
 {
   title: 'Church Planting Training',
   description: 'Practical training that equips church planters with the knowledge, skills, and tools needed to start healthy and sustainable church expressions. Training opportunities help leaders develop strategy, systems, and launch plans.',
   category: 'Develop',
   type: 'Training Program',
-  link: 'https://www.dcpi.org'
+  link: '/training'
 },
 {
   title: 'Church Planting Funding',
@@ -47,10 +47,10 @@ const resources = [
 },
 {
   title: 'Church Planting Networking',
-  description: 'Meaningful connections with church planters, multiplication leaders, churches, and ministry partners who share a passion for starting new churches. Networks provide relationships, collaboration, encouragement, shared learning, and opportunities for multiplication.',
+  description: 'In 2027, network with other church planters at the Exponential Reproducing Networks Accelerator Cohort.',
   category: 'Deploy',
   type: 'Program',
-  link: '/contact'
+  link: 'mailto:sfreeman@usacanadaregion.org'
 }];
 
 

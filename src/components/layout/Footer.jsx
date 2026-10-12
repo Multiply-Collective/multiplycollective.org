@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Mail, Instagram, Facebook } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -28,6 +29,7 @@ export default function Footer() {
                 { label: 'About', path: '/about' },
                 { label: 'Meet The Team', path: '/meet-the-team' },
                 { label: 'Events', path: '/events' },
+                { label: 'Training', path: '/training' },
                 { label: 'Resources', path: '/resources' },
 
               ].map((link) => (
@@ -42,7 +44,36 @@ export default function Footer() {
             </nav>
           </div>
 
-
+          <div>
+            <h4 className="text-sm font-body tracking-widest uppercase text-sanctuary/40 mb-6">Connect</h4>
+            <nav className="flex flex-col gap-3">
+              <a
+                href="mailto:sfreeman@usacanadaregion.org"
+                className="inline-flex items-center gap-2 text-sanctuary/60 hover:text-blue-light transition-colors text-base font-body"
+              >
+                <Mail className="w-4 h-4 text-blue-light" />
+                sfreeman@usacanadaregion.org
+              </a>
+              <a
+                href="https://www.instagram.com/multiplycollective_?stkn=ZmFrZGQwMTQyZWZq&utm_source=qr"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 text-sanctuary/60 hover:text-blue-light transition-colors text-base font-body"
+              >
+                <Instagram className="w-4 h-4 text-blue-light" />
+                Instagram
+              </a>
+              <a
+                href="https://www.facebook.com/share/19WLD6PYzf/?mibextid=wwXIfr"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 text-sanctuary/60 hover:text-blue-light transition-colors text-base font-body"
+              >
+                <Facebook className="w-4 h-4 text-blue-light" />
+                Facebook
+              </a>
+            </nav>
+          </div>
         </div>
 
         <div className="mt-20 pt-8 border-t border-sanctuary/10 flex flex-col md:flex-row justify-between items-center gap-4">

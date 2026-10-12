@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { Compass, Sprout, Rocket, ArrowUpRight } from 'lucide-react';
 import GoldLine from '../shared/GoldLine';
 import SectionHeading from '../shared/SectionHeading';
-import VideoPlaceholder from './VideoPlaceholder';
+import IntroVideo from './IntroVideo';
 
 const steps = [
 {
@@ -52,7 +52,7 @@ export default function PathwaySection() {
   return (
     <section className="py-24 md:py-40 px-6 md:px-12 bg-obsidian">
       <div className="max-w-7xl mx-auto">
-        <VideoPlaceholder />
+        <IntroVideo />
 
         <SectionHeading
           eyebrow="The Pathway"

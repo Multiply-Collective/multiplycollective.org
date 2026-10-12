@@ -1,45 +1,96 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, Calendar, ExternalLink, ArrowUpRight } from 'lucide-react';
+import { MapPin, Calendar, ExternalLink, ArrowUpRight, User, Mail } from 'lucide-react';
 import SectionHeading from '../components/shared/SectionHeading';
 import GoldLine from '../components/shared/GoldLine';
 
 const EVENTS_IMG = "https://media.base44.com/images/public/69f91c5d31dad328146ca459/539e6ad2f_generated_image.png";
 
+const ASSESSMENT_DESCRIPTION =
+  'A few-day comprehensive evaluation designed to help prospective church planters discern capacity and readiness to plant a church. Assessment Centers provide valuable feedback that helps planters prepare for the development stage.';
+
 const events = [
   {
-    title: 'Assessment Center — Fall 2026',
-    date: 'October 16–18, 2026',
-    location: 'Kansas City, MO',
+    title: 'Assessment Center — South Central',
+    date: 'Nov. 5–7, 2026',
+    startDate: '2026-11-05',
+    location: 'Oklahoma City, OK',
     category: 'Assessment Center',
-    description:
-      'A few-day comprehensive evaluation designed to help prospective church planters discern capacity and readiness to plant a church. Assessment Centers provide valuable feedback that helps planters prepare for the development stage.',
-    link: '/contact',
-    external: false,
+    leaders: 'D.S. Jim Bond | Dave Hazel',
+    field: 'SNU Educational Field',
+    contact: 'dave@oknaz.org',
+    description: ASSESSMENT_DESCRIPTION,
   },
   {
-    title: 'Exponential Global 2027',
-    date: 'March 1–4, 2027',
-    location: 'Orlando, FL',
+    title: 'Assessment Center — East Central',
+    date: 'Nov. 12–14, 2026',
+    startDate: '2026-11-12',
+    location: 'Piqua, OH',
+    category: 'Assessment Center',
+    leaders: 'D.S. Andy Monnin | Mark Coulter',
+    field: 'MVNU Educational Field',
+    contact: 'mark.coulter@thevalley.church',
+    description: ASSESSMENT_DESCRIPTION,
+  },
+  {
+    title: 'Assessment Center — Central',
+    date: 'March 3–5, 2027',
+    startDate: '2027-03-03',
+    location: 'Valparaiso, IN',
+    category: 'Assessment Center',
+    leaders: 'D.S. Brian Wangler | Shawn Evans',
+    field: 'ONU Educational Field',
+    contact: 'shawne@nazco.church',
+    description: ASSESSMENT_DESCRIPTION,
+  },
+  {
+    title: 'Assessment Center — Northwest',
+    date: 'March 2027',
+    startDate: '2027-03-01',
+    location: 'Seattle, WA',
+    category: 'Assessment Center',
+    leaders: 'D.S. Ev Tustin | D.S. Sam Flores',
+    field: 'NNU Educational Field',
+    contact: 'etustin@wapacnaz.org',
+    description: ASSESSMENT_DESCRIPTION,
+  },
+  {
+    title: 'Assessment Center — Southeast',
+    date: 'July 29–31, 2027',
+    startDate: '2027-07-29',
+    location: 'Batesburg, SC',
+    category: 'Assessment Center',
+    leaders: 'D.S. Sam Flores | Jeremy Reese',
+    field: 'TNU Educational Field',
+    contact: 'jeremy.reese@southcarolinanazarene.com',
+    description: ASSESSMENT_DESCRIPTION,
+  },
+  {
+    title: 'Exponential Learning Community',
+    date: 'Nov. 4–5, 2026 | Jan. 27–28, 2027 | Apr. 28–29, 2027',
+    startDate: '2026-11-04',
+    location: 'Wilmore, KY · Austin, TX · Naperville, IL',
     category: 'Exponential',
     description:
-      'The largest gathering of church planting leaders in the world. Join thousands of planters, pastors, and multiplication leaders for inspiration, training, and collaboration. Hosted by Exponential.',
+      'In person | 3 gatherings — a cohort-style learning community where church planting leaders grow together across three in-person sessions during the 2026–2027 season.',
     link: 'https://exponential.org',
     external: true,
   },
   {
-    title: 'Assessment Center — Spring 2027',
-    date: 'April 22–24, 2027',
-    location: 'Lenexa, KS',
-    category: 'Assessment Center',
+    title: 'Exponential Reproducing Networks',
+    date: 'Spring 2027',
+    startDate: '2027-03-20',
+    location: 'Online',
+    category: 'Exponential',
     description:
-      'A few-day comprehensive evaluation designed to help prospective church planters discern capacity and readiness to plant a church. Assessment Centers provide valuable feedback that helps planters prepare for the development stage.',
-    link: '/contact',
-    external: false,
+      'Online — a network experience equipping churches to move from addition to reproduction, helping leaders build multiplying systems and structures. Hosted by Exponential.',
+    link: 'https://exponential.org',
+    external: true,
   },
   {
     title: 'Exponential West 2027',
     date: 'September 28 – October 1, 2027',
+    startDate: '2027-09-28',
     location: 'Los Angeles, CA',
     category: 'Exponential',
     description:
@@ -47,9 +98,28 @@ const events = [
     link: 'https://exponential.org',
     external: true,
   },
+  {
+    title: 'Exponential Global 2027',
+    date: 'March 1–4, 2027',
+    startDate: '2027-03-01',
+    location: 'Orlando, FL',
+    category: 'Exponential',
+    description:
+      'The largest gathering of church planting leaders in the world. Join thousands of planters, pastors, and multiplication leaders for inspiration, training, and collaboration. Hosted by Exponential.',
+    link: 'https://exponential.org',
+    external: true,
+  },
 ];
 
+const categories = ['All', 'Assessment Center', 'Exponential'];
+
 export default function Events() {
+  const [activeFilter, setActiveFilter] = React.useState('All');
+
+  const visibleEvents = activeFilter === 'All'
+    ? [...events].sort((a, b) => a.startDate.localeCompare(b.startDate))
+    : events.filter((e) => e.category === activeFilter).sort((a, b) => a.startDate.localeCompare(b.startDate));
+
   return (
     <>
       {/* Hero */}
@@ -91,8 +161,31 @@ export default function Events() {
       {/* Events list */}
       <section className="py-12 md:py-20 px-6 md:px-12 bg-black">
         <div className="max-w-7xl mx-auto">
+          {/* Filter Ribbon */}
+          <div className="sticky top-20 z-30 bg-black/95 backdrop-blur-sm py-4 mb-8 border-b border-sanctuary/10">
+            <div className="flex items-center gap-2 overflow-x-auto pb-2">
+              {categories.map((cat) => (
+                <button
+                  key={cat}
+                  onClick={() => setActiveFilter(cat)}
+                  className={`px-4 py-2 text-sm font-body tracking-widest uppercase whitespace-nowrap transition-all duration-300 ${
+                    activeFilter === cat
+                      ? 'bg-sanctuary text-black'
+                      : 'text-sanctuary/50 hover:text-sanctuary border border-transparent hover:border-sanctuary/20'
+                  }`}
+                >
+                  {cat === 'Assessment Center' ? 'Assessment Centers' : cat === 'Exponential' ? 'Exponential' : cat}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <p className="text-sm font-body tracking-wider text-sanctuary/40 mb-8">
+            {visibleEvents.length} {visibleEvents.length === 1 ? 'event' : 'events'} listed
+          </p>
+
           <div className="space-y-6">
-            {events.map((event, i) => (
+            {visibleEvents.map((event, i) => (
               <motion.div
                 key={event.title}
                 initial={{ opacity: 0, y: 30 }}
@@ -118,13 +211,50 @@ export default function Events() {
                         <MapPin className="w-4 h-4 text-blue-light" />
                         {event.location}
                       </span>
+                      {event.field && (
+                        <span className="flex items-center gap-2 font-body text-sm text-sanctuary/50">
+                          <ExternalLink className="w-4 h-4 text-blue-light" />
+                          {event.field}
+                        </span>
+                      )}
                     </div>
+                    {event.leaders && (
+                      <div className="flex items-center gap-2 font-body text-sm text-sanctuary/50 mb-5">
+                        <User className="w-4 h-4 text-blue-light flex-shrink-0" />
+                        <span>
+                          Assessment Leaders: {event.leaders}
+                          {event.contact && (
+                            <>
+                              {' '}·{' '}
+                              <a
+                                href={`mailto:${event.contact}`}
+                                className="text-blue-light hover:text-white transition-colors inline-flex items-center gap-1"
+                              >
+                                <Mail className="w-3.5 h-3.5" />
+                                {event.contact}
+                              </a>
+                            </>
+                          )}
+                        </span>
+                      </div>
+                    )}
                     <p className="font-body text-sanctuary/60 text-base leading-relaxed max-w-2xl">
                       {event.description}
                     </p>
                   </div>
-                  <div className="flex-shrink-0">
-                    {event.external ? (
+                  {event.contact && (
+                    <div className="flex-shrink-0">
+                      <a
+                        href={`mailto:${event.contact}`}
+                        className="inline-flex items-center gap-2 font-body text-sm tracking-widest uppercase px-6 py-3 bg-blue text-white hover:bg-blue-dark transition-colors duration-300"
+                      >
+                        Contact
+                        <ArrowUpRight className="w-4 h-4" />
+                      </a>
+                    </div>
+                  )}
+                  {event.external && (
+                    <div className="flex-shrink-0">
                       <a
                         href={event.link}
                         target="_blank"
@@ -134,16 +264,8 @@ export default function Events() {
                         Visit Site
                         <ExternalLink className="w-4 h-4" />
                       </a>
-                    ) : (
-                      <a
-                        href={event.link}
-                        className="inline-flex items-center gap-2 font-body text-sm tracking-widest uppercase px-6 py-3 bg-blue text-white hover:bg-blue-dark transition-colors duration-300"
-                      >
-                        Register
-                        <ArrowUpRight className="w-4 h-4" />
-                      </a>
-                    )}
-                  </div>
+                    </div>
+                  )}
                 </div>
               </motion.div>
             ))}
