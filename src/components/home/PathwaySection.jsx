@@ -24,7 +24,7 @@ const steps = [
   icon: Sprout,
   title: 'Develop',
   subtitle: 'Your Gifts',
-  description: "The Multiply Collective helps church planters develop their vision, strategy, and leadership capacity through practical training and personalized coaching. Our training experiences and coaching provide the tools, guidance, and next steps needed to move from calling to launch with confidence and clarity.",
+  description: "The Multiply Collective helps church planters develop their vision, strategy, and leadership capacity through practical training and personalized coaching. Our training, experiences, and coaching provide the tools, guidance, and next steps needed to move from calling to launch with confidence and clarity.",
   buttonLabel: 'Develop Resources',
   buttonLink: '/resources?filter=Develop',
   resources: [
